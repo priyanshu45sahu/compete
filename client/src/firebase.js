@@ -9,15 +9,17 @@ import { getDatabase } from 'firebase/database';
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyDsGr5922YuYwqKCTAl28PiBY2zW8v6hQI",
-    authDomain: "compete-ef8a0.firebaseapp.com",
-    databaseURL: "https://compete-ef8a0-default-rtdb.firebaseio.com",
-    projectId: "compete-ef8a0",
-    storageBucket: "compete-ef8a0.firebasestorage.app",
-    messagingSenderId: "260922377719",
-    appId: "1:260922377719:web:22e2344bea57f2c8ce9af2",
-    measurementId: "G-E41FF8VD6D"
+    apiKey: import.meta.env.VITE_API_KEY,
+    authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+    databaseURL: import.meta.env.VITE_DATABASE_URL,
+    projectId: import.meta.env.VITE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_APP_ID,
+    measurementId: import.meta.env.VITE_MEASUREMENT_ID
+
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
